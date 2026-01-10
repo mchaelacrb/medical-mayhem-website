@@ -1,0 +1,235 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+
+.navigation {
+    background-color: #2037C8;
+     padding: 2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1.5rem;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav a {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+.container {
+    background-color: #F5F5F5;
+}
+
+/* 1st Section */
+
+.passsec1 {
+    background-color: #F5F5F5;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.passsec1-content {
+    width: 700px;
+    max-width: 85%; /* Adjusts for smaller screens */
+    background-color: white;
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 30px;
+  
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    
+    
+}
+
+.passsec1-content h1 {
+    color: red;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.accdetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+}
+
+.accdetails label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    align-self: flex-start;
+}
+
+.accdetails input {
+    width: 70%;
+    padding: 20px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border 0.3s ease;
+    margin-top: 5px;
+}
+
+.accdetails input:focus {
+    border: 1px solid #2037C8;
+    outline: none;
+}
+
+/* Button Section */
+
+.passsec2-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+button, .cancel-btn {
+    padding: 15px 15px;
+    width: 140px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+button {
+    background-color: #20C84D;
+    color: white;
+    text-decoration: none;
+    
+}
+
+button:hover {
+    transform: scale(1.05);
+    background-color: #18a542;
+}
+
+.cancel-btn {
+    background-color: #FFBD59;
+    color: black;
+    text-decoration: none;
+}
+
+.cancel-btn:hover {
+    transform: scale(1.05);
+    background-color: #e8ac52;
+}
+
+/* Responsive */
+
+@media (max-width: 375px){
+    .navigation{
+        padding: 1.5rem 1rem;
+        
+    }
+    .nav a{
+        font-size: 15px;
+    }
+
+    .passsec1 {
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .passsec1-content {
+        padding: 20px;
+    }
+
+    .passsec1-content h1 {
+        font-size: 18px;
+    }
+
+    .accdetails input {
+        font-size: 12px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .passsec2-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    button, .cancel-btn {
+        padding: 10px;
+        font-size: 12px;
+        width: 100%;
+        margin-bottom: -10px;
+    }
+}
+.notification {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f44336;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.notification.success {
+    background-color: #4CAF50; /* Green */
+}
+
+.notification.error {
+    background-color: #f44336; /* Red */
+}

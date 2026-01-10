@@ -1,0 +1,267 @@
+/* Global Styling */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Arial', Helvetica, sans-serif;
+    background-color: #f2f2f2; /* Soft background for the page */
+}
+
+/* Header */
+.navigation{
+    background-color: #b0434b;
+    padding: 2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1.5rem;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav a {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* Sections */
+.accsec1, .accsec2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.accsec3 {
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 40px 70px;
+}
+.accsec1-content, .accsec2-content {
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+.exit-btn, .changepass-btn {
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    border: 2px solid #ddd;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    display: inline-block; 
+    width: 300px; 
+    text-align: center; 
+
+    
+}
+
+.exit-btn {
+    background-color: #FFBD59;
+    color: black;
+}
+
+.exit-btn:hover {
+    transform: scale(1.1);
+    background-color: #ff9e3f; /* Slightly darker shade on hover */
+}
+
+.changepass-btn {
+    background-color: #2037C8;
+    color: white;
+}
+
+.changepass-btn:hover {
+    transform: scale(1.1);
+    background-color: #1a2ca2; /* Slightly darker shade on hover */
+}
+/* Account Information Section */
+.accsec1-content h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #b0434b;
+    margin-bottom: 20px;
+}
+
+.accsec1-content p {
+    font-size: 14px;
+    color: black;
+    line-height: 1.5;
+}
+
+/* Orders Section */
+.outer-order-div {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 12px 0;
+    padding: 16px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.order-details {
+    flex: 1; 
+}
+
+.order-details h3 {
+    margin: 0 0 6px;
+    font-size: 18px;
+}
+
+.order-details p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+.order-buttons {
+    display: flex;
+    flex-direction: column; /* Keeps buttons in a row */
+    gap: 8px;
+    margin-left: 16px;
+}
+
+.order-buttons button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+}
+
+.btn-received {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-cancel {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+
+@media (max-width: 375px) {
+        .navigation{
+        padding: 1.5rem 1rem;
+    }
+    .nav a{
+        font-size: 15px;
+    }
+
+    .accsec1-content, .accsec2-content {
+        padding: 15px;
+    }
+    .accsec1-content h1 {
+        font-size: 20px;
+    }
+    /* 3rd Section */
+    .accsec3 {
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .exit-btn {
+        padding: 10px 60px;
+        font-size: 12px;
+    }
+    .changepass-btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .order-details h3 {
+        font-size: 16px;
+    }
+
+    .order-details p {
+        font-size: 12px;
+    }
+}
+@media (max-width: 375px) {
+    .outer-order-div {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 12px;
+        }
+
+        .order-buttons {
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            margin: 0%;
+        }
+
+        .order-buttons button {
+            width: 100%;
+            font-size: 12px;
+        }
+
+        .order-details h3 {
+            font-size: 16px;
+        }
+
+        .order-details p {
+            font-size: 12px;
+        }
+
+        .accsec1-content p {
+            font-size: 14px;
+            
+        }
+
+        .accsec2-content h1 {
+            font-size: 18px;
+        }
+
+        .accsec3 a {
+            font-size: 14px;
+        }
+        .accsec1-content {
+            padding-left: 15px;
+        }
+    }
+

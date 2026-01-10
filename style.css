@@ -1,0 +1,153 @@
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('assets/background.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo img {
+    height: 175px;
+    width: 400px; 
+}
+
+.logincontent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logincontent img {
+    height: 300px;
+    width: 525px;
+}
+
+.login-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 60%;
+}
+
+
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form button {
+    padding: 10px;
+    width: 125px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #4CAF50;
+    color: black;
+    border-style: black;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.login-form button:hover{
+    transform: scale(1.1);
+}
+
+.logincontent h1 {
+    font-size: 1.5rem; /* Slightly larger heading */
+    margin-bottom: 13px; /* Space below the heading */
+    color: #000; /* Black text for emphasis */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Paragraph Styling */
+.logincontent p {
+    font-size: 1rem;
+    line-height: 1;
+    margin-bottom: 20px; /* Space below the paragraph */
+    color: #555; /* Muted text for readability */
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center; 
+}
+
+
+.signuptext {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.signuptext p {
+    font-size: 1.2rem;
+    color: #888585;
+}
+
+.signuptext a{
+    color: black;
+    transition: .3s;
+}
+
+.signuptext a:hover{
+    color: rgb(51, 0, 255);
+}
+
+
+
+/* Responsive */
+
+@media (max-width: 375px){
+    body{
+        background-image: url('assets/mobilebg1.png');
+    }
+
+    .logo img {
+        height: 100px;
+        width: 200px; 
+    }
+
+    .logincontent img {
+        height: 175px;
+        width: 275px;
+    }
+
+    .login-form input {
+        width: 175px;
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .login-form button {
+        padding: 5px;
+        width: 100px;
+        font-size: 12px;
+    }
+
+    .signuptext p {
+        font-size: 12px;
+    }
+
+    .signuptext a{
+        font-size: 12px;
+    }
+}

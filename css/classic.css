@@ -1,0 +1,707 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-image: url('assets/background.png');
+    background-size: cover; 
+    background-position: center;
+ 
+    height: 100vh;
+}
+
+/* Header */
+.navigation{
+    background-color: #b0434b;
+    padding: 2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1.5rem;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav a {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+
+}
+
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+/* 1st Section */
+
+.classicsec1{
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.classicsec1-content {
+    width: 1200px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.classicsec1-content h1 {
+    color: rgb(205, 203, 203);
+    margin-bottom: 50px;
+}
+
+.customerdetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    gap: 20px;
+}
+
+.customerdetails input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 2nd Section */
+
+.classicsec2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.classicsec2-content{
+    height: 250px;
+    width: 1200px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px ;
+    text-align: center;
+    padding: 10px;
+}
+
+.classicsec2-content h1{
+    color: rgb(205, 203, 203);
+}
+.classicsec2-content p{
+    color: black;
+    font-size: 18px;
+    font-weight: 600;   
+}
+
+
+.classicsec2-content input{
+    width: 72%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 3rd Section */
+
+.classicsec3{
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.classicsec3-content{
+    height: 200px;
+    width: 1200px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px ;
+    text-align: center;
+    padding: 10px;
+}
+
+.classicsec3-content h1{
+    color: rgb(205, 203, 203);
+}
+
+/* 4th Section */
+
+.classicsec4{
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    text-align: center;
+    padding: 30px 75px;
+    gap: 30px;
+}
+
+
+button:hover{
+    transform: scale(1.1);
+}
+
+
+.cancel-btn:hover{
+    transform: scale(1.1);
+}
+
+
+.modal .close {
+    font-size: 24px;
+    color: #aaa;
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.modal .close:hover {
+    color: #000;
+}
+
+/* Responsive */
+@media (min-width: 375px) {
+    .navigation{
+        padding: 1.5rem 1rem;
+        
+    }
+    .nav a{
+        font-size: 12px;
+    }
+}
+@media (max-width: 375px){
+    .navigation{
+        padding: 1.5rem 1rem;
+        
+    }
+    .nav a{
+        font-size: 12px;
+    }
+
+    /* 1st Section */
+
+    .classicsec1-content h1 {
+        font-size: 16px;
+    }
+
+    .customerdetails input {
+        width: 200px;
+        font-size: 12px;
+    }
+    .classicsec2-content input{
+        width: 200px;
+        font-size: 12px;
+    }
+    .classicsec2-content p{
+        font-size: 12px;
+    }
+
+    /* 2nd Section */
+
+    .classicsec2-content{
+        height: 200px;
+    }
+
+    .classicsec2-content h1{
+        font-size: 16px;
+    }
+
+    /* 3rd Section */
+
+    .classicsec3-content{
+        height: 250px;
+    }
+    
+    .classicsec3-content h1{
+        font-size: 16px;
+    }
+
+    /* 4th Section */
+
+    .classicsec4{
+        justify-content: center;
+    }
+    
+    button{
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    .cancel-btn{
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+.classicsec4m {
+    background-color: #ddd;
+}
+.notification {
+    position: absolute;
+    top: 60px; /* Adjusted to place below the navbar */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50; /* Default background color for success */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+
+.notification.success {
+    background-color: #4CAF50; /* Green for success */
+}
+
+.notification.error {
+    background-color: #f44336; /* Red for error */
+}
+
+.notification-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+}   /* Pop-up Modal Style */
+
+.userDetails {
+display: flex;
+flex: 1;
+justify-content: center;
+align-items: center;
+background-image: url("../assets/background.png");
+background-size: cover;        /* Makes image cover the div */
+background-position: center;   /* Centers the image */
+background-repeat: no-repeat;  /* Prevents tiling */
+
+
+}
+.order-details-header img {
+ width: auto;
+ height: 120px;
+}
+
+.order-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.order-details {
+    background-color: #fff1e0;
+    display: flex;
+    padding: 50px 80px;
+    margin: 50px;
+    border: 3px solid rgb(167, 114, 65);
+    border-radius: 30px;
+}
+.quantity-box {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #ffffff;
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 150px;
+  background-color: white;
+}
+
+.quantity-box button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: #e7e7e7;
+  color: rgb(109, 109, 109);
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.quantity-box button:hover {
+  background: #e6e6e6;
+}
+
+.quantity-box input {
+  width: 40px;
+  text-align: center;
+  border: none;
+  font-size: 16px;
+}
+
+/* Remove arrows in number input */
+.quantity-box input::-webkit-outer-spin-button,
+.quantity-box input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.quantity-box input[type=number] {
+  -moz-appearance: textfield;
+}
+.order-info h2 {
+font-family: 'Poppins', sans-serif;
+margin: 0;
+
+}
+.order-info p {
+    margin: 0;
+    line-height: 30px;
+
+}
+
+.read-only-details {
+background-color: #fff1e0;
+padding: 20px;
+border: 1px solid #8b6a43;
+border-radius: 8px;
+max-width: fit-content;
+margin: 40px;
+padding: 25px 50px;
+}
+
+.read-only-details p {
+margin-bottom: 15px;
+color: #2e2e2e;
+font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.update-profile-link {
+color: #4CAF50;
+font-weight: lighter;
+text-decoration: underline;
+cursor: pointer;
+font-size: 15px;
+}
+
+/* Order Form */
+form {
+border-radius: 8px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+background-image: url("../assets/background2.png");
+background-size: cover;        /* Makes image cover the div */
+background-position: center;   /* Centers the image */
+background-repeat: no-repeat;  /* Prevents tiling */
+
+}
+
+form input[type="number"],
+form input[type="text"],
+form input[type="email"] {
+width: 60%;
+padding: 12px;
+margin: 10px 20px;
+border: 1px solid #ddd;
+border-radius: 8px;
+font-size: 16px;
+}
+
+form input[type="number"]:focus,
+form input[type="text"]:focus,
+form input[type="email"]:focus {
+border-color: #4CAF50;
+outline: none;
+}
+
+/* Section Styling */
+section {
+}
+
+.classicsec2 h1,
+.classicsec3 h1,
+.userDetails h2,
+.read-only-details h1
+{
+font-size: 20px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+color: #6b5c45;
+
+
+}
+
+h3 {
+font-size: 18px;
+margin-bottom: 10px;
+}
+
+#shippingFee {
+color: #4CAF50;
+}
+
+/* Modal */
+.modal {
+display: none;
+position: fixed;
+z-index: 1;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+width: 70%; /* Increased width */
+max-width: 500px; /* Optional: you can adjust for more width */
+height: 70%; /* Reduced height */
+background-color: rgba(0, 0, 0, 0); /* Slight dark background for overlay */
+padding: 20px;
+box-sizing: border-box;
+}
+
+
+.modal input[type="text"],
+.modal input[type="email"],
+.modal input[type="number"] {
+width: 100%;
+padding: 12px;
+margin: 10px 0;
+border: 1px solid #ddd;
+border-radius: 6px;
+font-size: 16px;
+}
+
+button, .cancel-btn {
+padding: 12px 20px;
+font-size: 16px;
+border-radius: 6px;
+cursor: pointer;
+width: 48%;
+text-align: center;
+}
+
+button {
+background-color: #4CAF50;
+color: white;
+border: none;
+}
+
+button:hover {
+background-color: #45a049;
+}
+
+.cancel-btn {
+background-color: #f44336;
+color: white;
+text-decoration: none;
+border: none;
+}
+
+.cancel-btn:hover {
+background-color: #e53935;
+}
+
+input[type="number"] {
+width: 60%;
+}
+.form-border {
+
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 375px) {
+/* General adjustments for user details and form sections */
+
+.classicsec2 h1,
+.classicsec3 h1,
+.userDetails h2,
+.read-only-details h1
+{
+font-size: 15px;
+}
+
+.read-only-details, .userDetails, form {
+    padding: 10px;
+    margin: 10px;
+    font-size: 12px; /* Smaller font size for better use of space */
+}
+
+/* Header navigation adjustments for small screens */
+header .nav {
+    display: block;
+    text-align: center;
+}
+
+header .nav a {
+    margin: 8px 0;
+    font-size: 15px; /* Adjust font size for mobile links */
+    padding: 5px 0; /* Less padding to save space */
+    margin: 2px;
+    
+}
+
+/* Modal content adjustments for mobile */
+
+
+/* Buttons */
+button, .cancel-btn {
+padding: 12px 18px;
+font-size: 16px;
+border-radius: 6px;
+cursor: pointer;
+width: 48%;
+text-align: center;
+}
+
+button {
+background-color: #4CAF50;
+color: white;
+border: none;
+}
+
+button:hover {
+background-color: #45a049;
+}
+
+.cancel-btn {
+background-color: #f44336;
+color: white;
+text-decoration: none;
+border: none;
+}
+
+.cancel-btn:hover {
+background-color: #e53935;
+}
+
+/* Adjustments for small screens */
+@media (max-width: 375px) {
+
+
+/* Button adjustments for mobile */
+button, .cancel-btn {
+    font-size: 14px; /* Smaller button text */
+    padding: 10px 18px; /* Reduced padding for smaller buttons */
+    width: 100%; /* Full-width buttons */
+    box-sizing: border-box;
+}
+
+/* Update profile link adjustments */
+.update-profile-link {
+    font-size: 14px; /* Smaller text for better fit */
+    margin-top: 8px;
+    display: block;
+
+}
+
+/* Details section adjustments */
+.read-only-details p {
+    font-size: 12px; /* Smaller text for details */
+    margin-bottom: 6px; /* Reduced space between details */
+}
+
+/* Input fields adjustments */
+
+
+/* Notification adjustments */
+.notification {
+    width: 90%; /* Fit notification well on smaller screens */
+    font-size: 12px; /* Smaller font size for notifications */
+    padding: 8px 16px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 10px auto; /* Center the notification */
+}
+
+/* Order details and summary section */
+.classicsec2, .classicsec3, .classicsec4 {
+    padding: 8px;
+    font-size: 14px; /* Smaller text in sections */
+    text-align: center;
+}
+
+/* Quantity input field adjustments */
+.classicsec2 input {
+    width: 100%; /* Ensure input takes full width */
+    padding: 8px;
+    font-size: 12px; /* Smaller font size for input */
+    margin-bottom: 10px; /* Reduced space between input fields */
+}
+
+/* Order summary details */
+.classicsec3 h3,
+.classicsec2 h3 {
+    font-size: 12px; /* Smaller headings */
+}
+
+/* Adjust margins and padding for sections */
+.classicsec2, .classicsec3 {
+    margin-bottom: 12px;
+    display: block;
+}
+
+.modal {
+    width: 90%;
+    max-width: 350px; /* Slightly reduced max-width */
+    height: auto; /* Let content fit naturally */
+    
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+.modal .close {
+    font-size: 20px; /* Adjust close button size */
+    position: absolute;
+    top: 50px;
+    right: 60px;
+}
+
+.modal input[type="text"],
+.modal input[type="email"],
+.modal input[type="number"] {
+    font-size: 12px;
+    padding: 10px; /* Slightly reduced padding */
+ 
+ 
+}
+
+button, .cancel-btn {
+    padding: 12px 16px;
+    font-size: 14px; /* Adjust font size for buttons */
+    width: 100%; /* Adjust button width */
+    margin-top: 12px; /* Add spacing between buttons */
+}
+}}

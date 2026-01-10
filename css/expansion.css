@@ -1,0 +1,609 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+
+
+.navigation{
+    background-color: #654594;
+    padding: 2rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1.5rem;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav a {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+/* 1st Section */
+
+.classicsec1{
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.classicsec1-content {
+    width: 1200px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.classicsec1-content h1 {
+    color: rgb(205, 203, 203);
+    margin-bottom: 50px;
+}
+
+.customerdetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    gap: 20px;
+}
+
+.customerdetails input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 2nd Section */
+
+.classicsec2{
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.classicsec2-content{
+    height: 250px;
+    width: 1200px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px ;
+    text-align: center;
+    padding: 10px;
+}
+
+.classicsec2-content h1{
+    color: rgb(205, 203, 203);
+}
+.classicsec2-content p{
+    color: black;
+    font-size: 18px;
+    font-weight: 600;   
+}
+
+
+.classicsec2-content input{
+    width: 72%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* 3rd Section */
+
+.classicsec3{
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.classicsec3-content{
+    height: 200px;
+    width: 1200px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px ;
+    text-align: center;
+    padding: 10px;
+}
+
+.classicsec3-content h1{
+    color: rgb(205, 203, 203);
+}
+
+/* 4th Section */
+
+.classicsec4{
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    text-align: center;
+    padding: 30px 75px;
+    gap: 30px;
+}
+
+
+button:hover{
+    transform: scale(1.1);
+}
+
+.cancel-btn:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+/* Responsive */
+
+@media (max-width: 375px){
+   .navigation{
+        padding: 1.5rem 1rem;
+        justify-content: center;
+    }
+    .nav a{
+        font-size: 12px;
+    }
+
+    /* 1st Section */
+
+    .classicsec1-content h1 {
+        font-size: 16px;
+    }
+
+    .customerdetails input {
+        width: 200px;
+        font-size: 12px;
+    }
+    .classicsec2-content input{
+        width: 200px;
+        font-size: 12px;
+    }
+    .classicsec2-content p{
+        font-size: 12px;
+    }
+
+    /* 2nd Section */
+
+    .classicsec2-content{
+        height: 200px;
+    }
+
+    .classicsec2-content h1{
+        font-size: 16px;
+    }
+
+    /* 3rd Section */
+
+    .classicsec3-content{
+        height: 250px;
+    }
+    
+    .classicsec3-content h1{
+        font-size: 16px;
+    }
+
+    /* 4th Section */
+
+    .classicsec4{
+        justify-content: center;
+    }
+    
+    button{
+        padding: 15px;
+        font-size: 14px;
+    }
+    
+    .cancel-btn{
+        padding: 15px;
+        font-size: 14px;
+    }
+}
+.classicsec4m {
+    background-color: #ddd;
+}
+.notification {
+    position: absolute;
+    top: 60px; /* Adjusted to place below the navbar */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50; /* Default background color for success */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+
+.notification.success {
+    background-color: #4CAF50; /* Green for success */
+}
+
+.notification.error {
+    background-color: #f44336; /* Red for error */
+}
+
+.notification-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+}   /* Pop-up Modal Style */
+.userDetails {
+max-width: 800px;
+margin: 40px auto;
+padding: 20px;
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+border: 1px solid black;
+}
+
+.read-only-details {
+background-color: #fafafa;
+padding: 20px;
+border: 1px solid darkgray;
+border-radius: 8px;
+}
+
+.read-only-details p {
+margin-bottom: 15px;
+color: black;
+
+}
+
+.update-profile-link {
+color: #4CAF50;
+font-weight: lighter;
+text-decoration: underline;
+cursor: pointer;
+font-size: 15px;
+}
+
+/* Order Form */
+form {
+max-width: 800px;
+margin: 40px auto;
+padding: 30px;
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form input[type="number"],
+form input[type="text"],
+form input[type="email"] {
+width: 60%;
+padding: 12px;
+margin: 10px 20px;
+border: 1px solid #ddd;
+border-radius: 8px;
+font-size: 16px;
+}
+
+form input[type="number"]:focus,
+form input[type="text"]:focus,
+form input[type="email"]:focus {
+border-color: #4CAF50;
+outline: none;
+}
+
+/* Section Styling */
+section {
+margin-bottom: 30px;
+}
+
+.classicsec2 h1,
+.classicsec3 h1,
+.userDetails h2,
+.read-only-details h1
+{
+font-size: 20px;
+margin-bottom: 20px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+color: #383737;
+
+
+}
+
+h3 {
+font-size: 18px;
+margin-bottom: 10px;
+}
+
+#shippingFee {
+color: #4CAF50;
+}
+
+/* Modal */
+.modal {
+display: none;
+position: fixed;
+z-index: 1;
+left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+width: 70%; /* Increased width */
+max-width: 500px; /* Optional: you can adjust for more width */
+height: 70%; /* Reduced height */
+background-color: rgba(0, 0, 0, 0); /* Slight dark background for overlay */
+padding: 20px;
+box-sizing: border-box;
+}
+
+.modal .close {
+    font-size: 20px; /* Adjust close button size */
+    position: absolute;
+    top: 50px;
+    right: 60px;
+}
+
+
+
+.modal input[type="text"],
+.modal input[type="email"],
+.modal input[type="number"] {
+width: 100%;
+padding: 12px;
+margin: 10px 0;
+border: 1px solid #ddd;
+border-radius: 6px;
+font-size: 16px;
+}
+
+button, .cancel-btn {
+padding: 12px 20px;
+font-size: 16px;
+border-radius: 6px;
+cursor: pointer;
+width: 48%;
+text-align: center;
+}
+
+button {
+background-color: #4CAF50;
+color: white;
+border: none;
+}
+
+button:hover {
+background-color: #45a049;
+}
+
+.cancel-btn {
+background-color: #f44336;
+color: white;
+text-decoration: none;
+border: none;
+}
+
+.cancel-btn:hover {
+background-color: #e53935;
+}
+
+input[type="number"] {
+width: 60%;
+}
+.form-border {
+border: 1px solid black;
+
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 375px) {
+/* General adjustments for user details and form sections */
+
+.classicsec2 h1,
+.classicsec3 h1,
+.userDetails h2,
+.read-only-details h1
+{
+font-size: 15px;
+}
+
+.read-only-details, .userDetails, form {
+    padding: 10px;
+    margin: 10px;
+    font-size: 12px; /* Smaller font size for better use of space */
+}
+
+/* Header navigation adjustments for small screens */
+.navigation {
+    display: block;
+    text-align: center; 
+}
+
+header .nav a {
+ 
+    margin: 8px 0;
+    font-size: 15px; /* Adjust font size for mobile links */
+    padding: 5px 0; /* Less padding to save space */
+    margin: 2px;
+}
+    
+/* Modal content adjustments for mobile */
+
+
+/* Buttons */
+button, .cancel-btn {
+padding: 12px 18px;
+font-size: 16px;
+border-radius: 6px;
+cursor: pointer;
+width: 48%;
+text-align: center;
+}
+
+button {
+background-color: #4CAF50;
+color: white;
+border: none;
+}
+
+button:hover {
+background-color: #45a049;
+}
+
+.cancel-btn {
+background-color: #f44336;
+color: white;
+text-decoration: none;
+border: none;
+}
+
+.cancel-btn:hover {
+background-color: #e53935;
+}
+}
+/* Adjustments for small screens */
+@media (max-width: 375px) {
+
+
+/* Button adjustments for mobile */
+button, .cancel-btn {
+    font-size: 14px; /* Smaller button text */
+    padding: 10px 18px; /* Reduced padding for smaller buttons */
+    width: 100%; /* Full-width buttons */
+    box-sizing: border-box;
+}
+
+/* Update profile link adjustments */
+.update-profile-link {
+    font-size: 14px; /* Smaller text for better fit */
+    margin-top: 8px;
+    display: block;
+
+}
+
+/* Details section adjustments */
+.read-only-details p {
+    font-size: 12px; /* Smaller text for details */
+    margin-bottom: 6px; /* Reduced space between details */
+}
+
+/* Input fields adjustments */
+
+
+/* Notification adjustments */
+.notification {
+    width: 90%; /* Fit notification well on smaller screens */
+    font-size: 12px; /* Smaller font size for notifications */
+    padding: 8px 16px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 10px auto; /* Center the notification */
+}
+
+/* Order details and summary section */
+.classicsec2, .classicsec3, .classicsec4 {
+    padding: 8px;
+    font-size: 14px; /* Smaller text in sections */
+    text-align: center;
+}
+
+/* Quantity input field adjustments */
+.classicsec2 input {
+    width: 100%; /* Ensure input takes full width */
+    padding: 8px;
+    font-size: 12px; /* Smaller font size for input */
+    margin-bottom: 10px; /* Reduced space between input fields */
+}
+
+/* Order summary details */
+.classicsec3 h3,
+.classicsec2 h3 {
+    font-size: 12px; /* Smaller headings */
+}
+
+/* Adjust margins and padding for sections */
+.classicsec2, .classicsec3 {
+    margin-bottom: 12px;
+    display: block;
+}
+
+.modal {
+    width: 90%;
+    max-width: 350px; /* Slightly reduced max-width */
+    height: auto; /* Let content fit naturally */
+    
+}
+
+.modal-content {
+    padding: 20px;
+}
+
+
+
+.modal input[type="text"],
+.modal input[type="email"],
+.modal input[type="number"] {
+    font-size: 12px;
+    padding: 10px; /* Slightly reduced padding */
+ 
+ 
+}
+
+button, .cancel-btn {
+    padding: 12px 16px;
+    font-size: 14px; /* Adjust font size for buttons */
+    width: 100%; /* Adjust button width */
+    margin-top: 12px; /* Add spacing between buttons */
+}
+
+}

@@ -1,0 +1,145 @@
+/* General Styling */
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('assets/background.png');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Logo Styling */
+.logo img {
+    height: 175px;
+    width: 400px; 
+}
+
+/* Login Content Styling */
+.logincontent {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logincontent img {
+    height: 400px;
+    width: 525px;
+}
+
+.login-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 60%;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-form button {
+    padding: 10px;
+    width: 125px;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #4CAF50;
+    color: black;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.login-form button:hover {
+    transform: scale(1.1);
+}
+
+.logincontent h1 {
+    font-size: 1.5rem;
+    margin-bottom: 13px;
+    color: #000;
+}
+
+.logincontent p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #555;
+    text-align: center; 
+}
+
+/* Signup Text Styling */
+.signuptext {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.signuptext p {
+    font-size: 1.2rem;
+    color: #888585;
+}
+
+.signuptext a {
+    color: black;
+    transition: .3s;
+}
+
+.signuptext a:hover {
+    color: rgb(51, 0, 255);
+}
+
+/* Responsive Design */
+@media (max-width: 375px) {
+    body {
+        background-image: url('assets/mobilebg1.png');
+    }
+
+    .logo img {
+        height: 100px;
+        width: 200px; 
+    }
+
+    .logincontent img {
+        height: 290px;
+        width: 290px;
+    }
+    .login-form h1 {
+        
+        font-size: 20px;
+        justify-content: center;
+        text-align: center
+    }
+    .login-form p {
+        
+        margin-top: 5px;
+        justify-content: center;
+        text-align: center;
+    }
+    .signuptext p {
+        font-size: 12px;
+    }
+}
