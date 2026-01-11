@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('assets/background.png');
+    background-image: url('../assets/background.png');
     background-size: cover;
     background-position: center;
 }
@@ -118,7 +118,7 @@ body {
 
 @media (max-width: 375px){
     body{
-        background-image: url('assets/mobilebg1.png');
+        background-image: url('../assets/mobilebg1.png');
     }
 
     .logo img {

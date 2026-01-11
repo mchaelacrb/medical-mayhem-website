@@ -63,7 +63,7 @@ body{
 /* 1st Section */
 
 .expsection1{
-    background-image: url('assets/frankensteinbg1.png');
+    background-image: url('../assets/frankensteinbg1.png');
     background-size: cover; 
     background-position: center;
     display: flex;
@@ -97,7 +97,7 @@ body{
 /* 2nd Section */
 
 .expsection2{
-    background-image: url('assets/frankensteinbg2.png');
+    background-image: url('../assets/frankensteinbg2.png');
     background-size: cover; 
     height: 100vh;
     display: flex;
@@ -314,7 +314,7 @@ body{
 /* Footer */
 
 .exp{
-    background-image: url("assets/frankfooterbg.png");
+    background-image: url("../assets/frankfooterbg.png");
     background-size: cover;
     background-position: center;
     padding: 20px 40px;
@@ -453,7 +453,7 @@ body{
     /* 1st Section */
 
     .expsection1{
-        background-image: url('assets/frankmobilebg1.png');
+        background-image: url('../assets/frankmobilebg1.png');
         height: 500px;
     }
 
@@ -482,7 +482,7 @@ body{
     /* 2nd Section */
 
     .expsection2{
-        background-image: url("assets/frankmobilebg2.png");
+        background-image: url("../assets/frankmobilebg2.png");
         background-size: cover;
         height: auto;
     }

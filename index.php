@@ -43,7 +43,7 @@ if ($isLoggedIn) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/logo.png">
     <title>MEDICAL MAYHEM</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
     <style>
         .hidden {
             display: none;
@@ -95,7 +95,7 @@ if ($isLoggedIn) {
 
 <header class="navigation">
     <div class="nav">
-        <a href="classic.php">CLASSIC</a>
+        <a id="classic-link" href="classic.php">CLASSIC</a>
         <a href="frankenstein.php">EXPANSION</a>
     </div>
     <div class="nav-icon">
@@ -326,6 +326,17 @@ document.getElementById('buyNow')?.addEventListener('click', function (event) {
         window.location.href = "classic.php";
     }
 });
+
+document.getElementById('classic-link')?.addEventListener('click', function (event) {
+    if (!<?= json_encode($isLoggedIn) ?>) {
+        event.preventDefault();
+        document.getElementById('notification').classList.remove('hidden');
+    }
+    else {
+        window.location.href = "classic.php";
+    }
+});
+
 
 // Handle user icon click
 document.getElementById('user-icon')?.addEventListener('click', function () {

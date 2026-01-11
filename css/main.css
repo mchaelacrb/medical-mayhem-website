@@ -10,7 +10,7 @@ body{
 /* Header */
 
 .navigation{
-    background-color: #43acb0;
+    background-color: #b0434b;
     padding: 1rem 1.5rem;
     display: flex;
     align-items: center;
@@ -62,7 +62,7 @@ body{
 /* 1st Section */
 
 .section1{
-    background-image: url('assets/background.png');
+    background-image: url('../assets/background.png');
     background-size: cover; 
     background-position: center;
     display: flex;
@@ -134,7 +134,7 @@ body{
 /* 2nd Section */
 
 .section2{
-    background-image: url('assets/background2.png');
+    background-image: url('../assets/background2.png');
     background-size: cover; 
     background-position: center;
     height: 900px;
@@ -150,7 +150,7 @@ body{
 /* 3rd Section */
 
 .section3{
-    background-image: url('assets/background3.png');
+    background-image: url('../assets/background3.png');
     background-size: cover; 
     background-position: center;
     height: 900px;
@@ -300,7 +300,7 @@ body{
 
 .carouselsection3{
     padding: 20px;
-    background-image: url("assets/background4.png");
+    background-image: url("../assets/background3.png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -311,7 +311,7 @@ body{
 /* Footer  */
 
 footer{
-    background-image: url("assets/footerbg.png");
+    background-image: url("../assets/footerbg.png");
     background-size: cover;
     background-position: center;
     padding: 20px 40px;
@@ -455,7 +455,7 @@ footer{
 /* 1st Section */
 
     .section1{
-        background-image: url('assets/mobilebg1.png');
+        background-image: url('../assets/mobilebg1.png');
     }
 
     .logo{
@@ -483,7 +483,7 @@ footer{
 /* 2nd Section */
 
     .section2{
-        background-image: url('assets/mobilebg2.png');;
+        background-image: url('../assets/mobilebg2.png');
         height: 720px;
     }
 
@@ -495,7 +495,7 @@ footer{
 /* 3rd Section */
 
     .section3{
-        background-image: url('assets/mobilebg3.png');
+        background-image: url('../assets/mobilebg3.png');
         height: 720px;
     }
 
@@ -548,7 +548,7 @@ footer{
 /* footer */
 
     footer{
-        background-image: url("assets/footermobilebg.png");
+        background-image: url("../assets/footermobilebg.png");
     }
 
     .footer-content{

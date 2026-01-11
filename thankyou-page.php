@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="assets/logo.png">
     <title>MEDICAL MAYHEM</title>
-    <link rel="stylesheet" href="thankyou-page.css">
+    <link rel="stylesheet" href="css/thankyou-page.css">
 </head>
 <body>
     <div class="content">

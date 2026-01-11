@@ -1,3 +1,4 @@
+/* General Styling */
 body {
     padding: 0;
     margin: 0;
@@ -5,9 +6,10 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('assets/background.png');
+    background-image: url('../assets/background.png');
     background-size: cover;
     background-position: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .content {
@@ -17,11 +19,13 @@ body {
     gap: 20px;
 }
 
+/* Logo Styling */
 .logo img {
     height: 175px;
     width: 400px; 
 }
 
+/* Login Content Styling */
 .logincontent {
     position: relative;
     display: flex;
@@ -30,7 +34,7 @@ body {
 }
 
 .logincontent img {
-    height: 350px;
+    height: 400px;
     width: 525px;
 }
 
@@ -61,44 +65,57 @@ body {
     font-weight: 600;
     background-color: #4CAF50;
     color: black;
-    border-style: black;
+    border: none;
     border-radius: 15px;
     cursor: pointer;
     transition: 1s ease;
 }
 
-.login-form button:hover{
+.login-form button:hover {
     transform: scale(1.1);
 }
 
-.logintext {
-    font-family: Arial, Helvetica, sans-serif;
+.logincontent h1 {
+    font-size: 1.5rem;
+    margin-bottom: 13px;
+    color: #000;
+}
+
+.logincontent p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: #555;
+    text-align: center; 
+}
+
+/* Signup Text Styling */
+.signuptext {
     display: flex;
+    justify-content: center;
     align-items: center;
+    text-align: center;
     gap: 10px;
 }
 
-.logintext p {
+.signuptext p {
     font-size: 1.2rem;
     color: #888585;
 }
 
-.logintext a{
+.signuptext a {
     color: black;
     transition: .3s;
 }
 
-.logintext a:hover{
+.signuptext a:hover {
     color: rgb(51, 0, 255);
 }
 
-
-
-/* Responsive */
-
-@media (max-width: 375px){
-    body{
-        background-image: url('assets/mobilebg1.png');
+/* Responsive Design */
+@media (max-width: 375px) {
+    body {
+        background-image: url('../assets/mobilebg1.png');
     }
 
     .logo img {
@@ -107,31 +124,22 @@ body {
     }
 
     .logincontent img {
-        height: 260px;
-        width: 285px;
+        height: 290px;
+        width: 290px;
     }
-
-    .login-form {
-        gap: 10px;
+    .login-form h1 {
+        
+        font-size: 20px;
+        justify-content: center;
+        text-align: center
     }
-
-    .login-form input {
-        width: 175px;
-        padding: 10px;
-        font-size: 12px;
+    .login-form p {
+        
+        margin-top: 5px;
+        justify-content: center;
+        text-align: center;
     }
-
-    .login-form button {
-        padding: 5px;
-        width: 100px;
-        font-size: 12px;
-    }
-
-    .logintext p {
-        font-size: 12px;
-    }
-
-    .logintext a{
+    .signuptext p {
         font-size: 12px;
     }
 }
