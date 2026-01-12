@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                
                 
                 // Email content
-                $mail->setFrom('curibamecha11@gmail.com', 'MEDICAL MAYHEM');
+                $mail->setFrom($_ENV['SMTP_USER'], 'MEDICAL MAYHEM');
                 $mail->addAddress($email);
                 $mail->isHTML(true);
                 $mail->Subject = 'Verify Your Email Address';
