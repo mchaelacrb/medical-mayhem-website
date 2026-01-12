@@ -46,16 +46,16 @@ if (isset($_POST['action'], $_POST['order_id'])) {
 
         // SMTP configuration
         $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com'; // Gmail SMTP server
+        $mail->Host = $_ENV['SMTP_HOST']; // Gmail SMTP server
         $mail->SMTPAuth = true;
-        $mail->Username = 'curibamecha11@gmail.com'; // Replace with your Gmail address
-        $mail->Password = 'arecfwnfsxfudukm'; // Replace with your Gmail password or app password
-       $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
-        $mail->Port = 587;
+        $mail->Username = $_ENV['SMTP_USER']; // Replace with your Gmail address
+        $mail->Password = $_ENV['SMTP_PASS']; // Replace with your Gmail password or app password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = $_ENV['SMTP_PORT'];
 
         // Email content
-        $mail->setFrom('curibamecha11@gmail.com', 'Medical Mayhem'); // Replace with your sender email and name
-        $mail->addAddress('curibamecha11@gmail.com'); // Replace with admin's email
+        $mail->setFrom($_ENV['SMTP_USER'], 'Medical Mayhem'); // Replace with your sender email and name
+        $mail->addAddress($_ENV['SMTP_USER']); // Replace with admin's email
         $mail->Subject = "Order Cancel Request";
         $mail->Body = "The user with ID {$_SESSION['user_id']} has requested to cancel order ID {$order_id}.";
 

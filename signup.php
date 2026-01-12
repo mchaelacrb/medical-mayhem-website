@@ -1,6 +1,11 @@
 <?php
 require 'includes/db.php';
 require 'vendor/autoload.php'; // Include PHPMailer
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
@@ -54,13 +59,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // SMTP configuration (example with Gmail SMTP server)
               $mail->isSMTP();
        
-                $mail->isSMTP();                                            // Set mailer to use SMTP
-                $mail->Host       = 'smtp.gmail.com';//'medicalmayhem.shop';                    // Your SMTP server (use the hostname from your hosting provider)
-                $mail->SMTPAuth   = true;                                     // Enable SMTP authentication
-                $mail->Username   = 'curibamecha11@gmail.com';//'kyvpiqrl';              // SMTP username (email address)
-                $mail->Password   = 'arecfwnfsxfudukm';//'medicalmayhem2024';                    // SMTP password (password for the email account)
-                $mail->SMTPSecure =  PHPMailer::ENCRYPTION_STARTTLS;           // Enable TLS encryption
-                $mail->Port       = '587';//587;                                      // TCP port for TLS/STARTTLS (usually 587)
+                $mail->isSMTP();  // Set mailer to use SMTP
+                $mail->Host       = $_ENV['SMTP_HOST']; // Your SMTP server (use the hostname from your hosting provider)
+                $mail->SMTPAuth   = true; // Enable SMTP authentication
+                $mail->Username   = $_ENV['SMTP_USER']; // SMTP username (email address)
+                $mail->Password   = $_ENV['SMTP_PASS']; // SMTP password (password for the email account)
+                $mail->SMTPSecure =  PHPMailer::ENCRYPTION_STARTTLS; // Enable TLS encryption
+                $mail->Port       = $_ENV['SMTP_PORT']; // TCP port for TLS/STARTTLS (usually 587)
 
                
                 

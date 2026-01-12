@@ -1,6 +1,9 @@
 <?php
 require 'includes/db.php'; 
+
 session_start();
+
+
 
 // Logout functionality
 if (isset($_GET['logout']) && $_GET['logout'] === 'true') {

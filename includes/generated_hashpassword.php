@@ -1,2 +1,7 @@
 <?php
-echo password_hash("admin123", PASSWORD_DEFAULT);
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+echo password_hash($_ENV['ADMIN_PASSWORD'], PASSWORD_DEFAULT);
