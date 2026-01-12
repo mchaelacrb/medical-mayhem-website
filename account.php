@@ -23,7 +23,7 @@ $stmt = $pdo->prepare("SELECT username, created_at, email, password FROM users W
 $stmt->execute(['user_id' => $user_id]);
 $account = $stmt->fetch();
 ?>
-<!-- hello -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
