@@ -329,7 +329,7 @@ document.getElementById('buyNow')?.addEventListener('click', function (event) {
         window.location.href = "classic.php";
     }
 });
-
+// Handle Classic button
 document.getElementById('classic-link')?.addEventListener('click', function (event) {
     if (!<?= json_encode($isLoggedIn) ?>) {
         event.preventDefault();
